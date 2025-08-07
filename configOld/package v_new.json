@@ -1,0 +1,42 @@
+{
+  "name": "repo-exercise",
+  "version": "1.0.0",
+  "description": "Blank project.",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack serve",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-prod": "webpack --config=webpack.prod.config.js",
+    "build": "webpack --config=webpack.dev.config.js",
+    "clean-dev": "aws s3 rm --recursive --profile burnghost s3://dev-games.burnghost.com/ghostrun/",
+    "clean-prod": "aws s3 rm --recursive --profile burnghost s3://prod-games.burnghost.com/ghostrun/",
+    "invalidate-dev": "aws cloudfront create-invalidation --distribution-id E1HAFB2IQZBE5A  --profile burnghost --paths '/ghostrun*'",
+    "invalidate-prod": "aws cloudfront create-invalidation --distribution-id E3P3NM0CUYV1KU  --profile burnghost --paths '/ghostrun*'",
+    "deploy": "npm run clean-dev  && aws s3 cp ./build s3://dev-games.burnghost.com/ghostrun  --region us-east-1 --recursive --profile burnghost && npm run invalidate-dev",
+    "deploy-prod": "npm run clean-prod && aws s3 cp ./build s3://prod-games.burnghost.com/ghostrun --region us-east-1 --recursive --profile burnghost && npm run invalidate-prod"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cannon-es": "^0.20.0",
+    "cannon-es-debugger": "^1.0.0",
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^7.1.2",
+    "gsap": "^3.12.5",
+    "howler": "^2.2.4",
+    "html-loader": "^5.1.0",
+    "html-webpack-plugin": "^5.6.3",
+    "style-loader": "^4.0.0",
+    "terser-webpack-plugin": "^5.3.11",
+    "three": "^0.172.0",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^6.0.1"
+  },
+  "devDependencies": {
+    "assets-webpack-plugin": "^7.1.1",
+    "copy-webpack-plugin": "^12.0.2",
+    "webpack-dev-server": "^5.2.0",
+    "webpack-obfuscator": "^3.5.1"
+  }
+}

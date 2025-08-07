@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Title</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!--meta---------------------------------------------------------------------------------------------------------- -->
+    <style>
+      body { margin: 0; background: black; font-family: sans-serif; }
+    </style>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-K8LPL4T9LY");
+    </script>
+
+    <script>
+      window.addEventListener("load", (event) => {
+        window.parent.postMessage(
+          JSON.stringify({
+            type: "GameLoaded",
+          }),
+          "*"
+        );
+      });
+    </script>
+
+</head>
+
+<body>
+
+    <div id="pushDown">
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </div>
+
+    <div id="feedback">asdf</div>
+
+    <!-- loading -->
+
+    <div id="loadingImage"></div>
+    <div id="loadingBack"></div>
+
+    <div class="ui" id="matchDiv"></div>
+    <div class="ui" id="scoreDiv"></div>
+    <div class="ui" id="timerDiv"></div>
+    <div class="ui" id="targetDiv">MEGA: FRENCH FRIES</div>
+
+    <div id="topDiv">
+      </div>
+
+    <div id="bonusDiv">
+      <div id="bonusText">BONUS</div>
+      <div id="bonusBar">
+        <div id="innerBar"></div>
+      </div>
+      <div id="bonusText2">x1</div>
+    </div>
+
+    <div id="startDiv">
+      <img src="./src/images/logo.jpg" id="logo">
+      <div id="instructions">Drag matching items onto<br>the squares to score higher.</div>
+      <div id="playBut">PLAY</div>
+      <div id="tutorialBut">TUTORIAL</div>
+      <!-- <div id="startBut">START</div> -->
+    </div>
+
+    <div id="tutorialDiv1" style="display: none;">
+      <div id="tutorialText1">Match similar items on the<br>squares to score points.</div>
+      <div id="tutorialContinue1">CONTINUE</div>
+    </div>
+
+    <div id="tutorialDiv2" style="display: none;">
+      <div id="tutorialText2">Match faster to raise your multiplier and earn score bonuses.</div>
+      <div id="tutorialContinue2">CONTINUE</div>
+    </div>
+
+    <div id="finalDiv">
+      <div id="scoreDiv1">SCORE</div>
+      <div id="progressBarContainer">
+        <div id="progressBarOutline">
+          <div id="progressBarFill"></div>
+        </div>
+      </div>
+      <div id="scoreBreakdown">
+        <div class="scoreDetail">
+          <span class="scoreLabel">Regular Matches:</span>
+          <span class="scoreValue" id="scoreBase">0</span>
+        </div>
+        <div class="scoreDetail">
+          <span class="scoreLabel">Multiplier Bonus:</span>
+          <span class="scoreValue" id="scoreBonus">0</span>
+        </div>
+        <div class="scoreDetail">
+          <span class="scoreLabel">Megamatches:</span>
+          <span class="scoreValue" id="scoreTarget">0</span>
+        </div>
+        <div class="scoreDetail">
+          <span class="scoreLabel">Megamatch Bonus:</span>
+          <span class="scoreValue" id="scoreTargetBonus">0</span>
+        </div>
+        <div class="scoreDetail">
+          <span class="scoreLabel">Time Left Bonus:</span>
+          <span class="scoreValue" id="timeLeftBonus">0</span>
+        </div>
+        <div class="scoreDetail">
+          <span class="scoreLabel">Longest Streak:</span>
+          <span class="scoreValue" id="longestStreak">1</span>
+        </div>
+      </div>
+      <div id="scoreDiv2">5030</div>
+      <!-- <div id="scoreDiv3">MATCHES: 30</div> -->
+    </div>
+
+    <div id="fader"></div>
+    <div id="faderBlack"></div>
+    <div id="streakBrokenText">STREAK BROKEN</div>
+    <div id="timeBonusText">+5 SECONDS</div>
+    <div id="countdownText">3</div>
+
+      <div id="pauseOverlay">
+        <div id="pauseTitle">PAUSE</div>
+        <div id="pauseSubtitle">NEXT MEGAMATCH:</div>
+        <div id="pauseItemName">CAR</div>
+        <div id="pauseImage">
+          <canvas id="targetCanvas" style="width: 150px; height: 150px; background: black; border: none"></canvas>
+      </div>
+      <div id="pauseResume">RESUME IN 5</div>
+    </div>
+
+</body>
+</html>
