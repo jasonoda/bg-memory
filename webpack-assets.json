@@ -1,6 +1,6 @@
 {
   "index": {
-    "js": "index-bundle-080b624389fb933f23bd.js"
+    "js": "index-bundle-88b9483a82a230de4964.js"
   },
   "": {
     "png": [
@@ -91,15 +91,14 @@
       "src/images/cards/wand_r.png",
       "src/images/bonus_clock.png",
       "src/images/bonus_eye.png",
+      "src/images/splashImage.png",
       "src/images/cards/staff_g.png",
       "src/images/cards/staff_b.png",
       "src/images/cards/staff_p.png",
       "src/images/bonus_x2.png",
       "src/images/cards/minion.png",
-      "src/images/background.png",
-      "src/images/splashImage.png"
+      "src/images/background.png"
     ],
-    "js": "728-bundle-080b624389fb933f23bd.js",
     "mp3": [
       "src/sounds/introMusic.mp3",
       "src/sounds/softBoom.mp3",
@@ -136,7 +135,11 @@
       "src/sounds/click.mp3"
     ],
     "jpg": "src/images/cardBack.jpg",
-    "html": "game.html",
+    "html": [
+      "game.html",
+      "index.html"
+    ],
+    "js": "src_starScores_json-bundle-88b9483a82a230de4964.js",
     "ini": "src/sounds/desktop.ini"
   }
 }

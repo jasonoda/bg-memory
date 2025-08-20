@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<!-- Google tag (gtag.js) -->
+		<script
+			async
+			src="https://www.googletagmanager.com/gtag/js?id=G-JZHSBCVXRZ"
+		></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag("js", new Date());
+
+			gtag("config", "G-JZHSBCVXRZ");
+		</script>
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+		/>
+		<title>Title</title>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="shared.css" />
+
+		<!--meta---------------------------------------------------------------------------------------------------------- -->
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+	</head>
+
+	<body>
+		<div id="pushDown">
+			<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+		</div>
+
+		<div id="startMenu">
+			<div id="startMenuContainer">
+				<img id="splashImage" src="src/images/splashImage.png" alt="Splash">
+				<div id="playButton">PLAY</div>
+				<div id="instructionsButton">INSTRUCTIONS</div>
+			</div>
+		</div>
+
+		<div id="instructionsOverlay">
+			<div id="instructionsContainer">
+				<div id="instructionsTitle">INSTRUCTIONS</div>
+				
+				<div id="instructionsText">
+					<div class="instructionLine">Tap when dots are in the<br />center for better accuarcy.</div>
+					<img src="src/images/topMeterIns.png" alt="Instructions" id="instructionsImage">
+					<div class="instructionDivider"></div>
+					<div class="instructionLine">Increase your score multiplier<br />by getting streaks.</div>
+					<div class="instructionDivider"></div>
+					<div class="instructionLine">Time limit: 2 minutes</div>
+				</div>
+				<div id="closeInstructionsButton">CLOSE</div>
+			</div>
+		</div>
+
+		<!-- loading -->
+
+		<div id="loadingImage"></div>
+		<div id="loadingBack"></div>
+
+		<div id="feedback">asdf</div>
+
+		<div id="fader"></div>
+		<div id="faderBlack"></div>
+
+		<div id="topDiv"></div>
+		<div id="bonusDiv"></div>
+
+		<div id="scoreDiv" class="ui">0</div>
+		<div id="timerDiv" class="ui">2:00</div>
+
+		<div class="ui" id="bonusDisplay">BONUS: x1.0</div>
+
+		<img id="vig" src="src/images/vig.png" />
+
+		<div id="meterDiv">
+			<img id="meterImg" src="src/images/topMeter.svg" />
+			<div id="meterVertDot"></div>
+			<div id="meterHorDot"></div>
+		</div>
+
+	</body>
+</html>

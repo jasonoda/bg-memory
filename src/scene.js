@@ -692,13 +692,13 @@ export class Scene {
     
     createTimer() {
         // Get existing timer element
-        this.timerElement = document.getElementById('timerDiv');
+        this.timerElement = document.getElementById('upperRightDiv');
         this.updateTimerDisplay();
     }
     
     createScoreDisplay() {
         // Get existing score element
-        this.scoreElement = document.getElementById('scoreDiv');
+        this.scoreElement = document.getElementById('upperLeftDiv');
         this.updateScoreDisplay();
     }
     
@@ -1049,12 +1049,15 @@ export class Scene {
     }
     
     setupInstructionsButton() {
+        console.log("setupInstructionsButton");
         const instructionsButton = document.getElementById('instructionsButton');
         const closeInstructionsButton = document.getElementById('closeInstructionsButton');
         const instructionsOverlay = document.getElementById('instructionsOverlay');
         
         if (instructionsButton) {
             instructionsButton.addEventListener('click', () => {
+                this.e.s.p("click");
+                console.log("instructionsButton clicked");
                 if (instructionsOverlay) {
                     instructionsOverlay.style.display = 'flex';
                 }
@@ -1063,6 +1066,7 @@ export class Scene {
         
         if (closeInstructionsButton) {
             closeInstructionsButton.addEventListener('click', () => {
+                this.e.s.p("click");
                 if (instructionsOverlay) {
                     instructionsOverlay.style.display = 'none';
                 }
@@ -1113,9 +1117,6 @@ export class Scene {
     }
     
     showGameOverScreen() {
-        // Get the final score screen
-        const finalDiv = document.getElementById('finalDiv');
-        
         // Hide the card grid
         if (this.cardContainer) {
             this.cardContainer.style.display = 'none';
@@ -1158,34 +1159,21 @@ export class Scene {
         const x2Bonus = this.x2Bonus;
         const levelReached = this.currentLevel - 1;
         
-        // Update score breakdown
-        document.getElementById('scoreBase').textContent = `(${this.totalMatches}) ${matchesScore}`;
-        document.getElementById('scoreBonus').textContent = multiplierBonus;
-        document.getElementById('x2Bonus').textContent = x2Bonus;
-        document.getElementById('levelReached').textContent = levelReached;
+        // Create stats array for endScore
+        const statsArray = [
+            ['Number of Matches', `${this.totalMatches} (${matchesScore})`],
+            ['Match Multiplier Bonus', multiplierBonus],
+            ['x2 Bonus', x2Bonus],
+            ['Level Reached', levelReached]
+        ];
         
-        // Update total score
-        document.getElementById('scoreDiv2').textContent = this.score;
-        
-        // Show the screen
-        finalDiv.style.display = 'flex';
-        
-        // Animate progress bar
-        const progressBarFill = document.getElementById('progressBarFill');
-        if (progressBarFill) {
-            setTimeout(() => {
-                progressBarFill.style.width = '100%';
-            }, 500);
-        }
+        // Use the new endScore system
+        this.e.endScore.createFinalScoreOverlay(this.score, statsArray);
     }
     
     restartGame() {
         // Hide final score screen
-        const finalDiv = document.getElementById('finalDiv');
-        if (finalDiv) {
-            finalDiv.style.display = 'none';
-        }
-        
+       
         // Reset progress bar
         const progressBarFill = document.getElementById('progressBarFill');
         if (progressBarFill) {

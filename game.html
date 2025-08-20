@@ -5,7 +5,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>Title</title>
+    <title>Memory Rush</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,16 +41,28 @@
 
 <body>
 
+    <div id="hideMe"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>
+
     <div id="feedback">Memory Game</div>
 
-    <!-- Additional UI Elements -->
+    <div id="loadingImage"></div>
+    <div id="loadingBack"></div>
+
+    <div id="fader"></div>
+    <div id="faderBlack"></div>
+
     <div class="ui" id="levelDiv">LEVEL: 1</div>
-    <div class="ui" id="scoreDiv">0</div>
-    <div class="ui" id="timerDiv">0</div>
+    <div class="ui" id="upperLeftDiv">0</div>
+    <div class="ui" id="upperRightDiv">0</div>
     <div class="ui" id="bonusDisplay">BONUS: x1.0</div>
+
+    <div id="topDiv"></div>
+    <div id="bonusDiv"></div>
+
     <div class="ui" id="timeFreezeDisplay">TIME FROZEN: 0</div>
     <div class="ui" id="x2BonusDisplay">DOUBLE POINTS: 0</div>
-    <div id="scorePopup">+100</div>
+
+    <div id="scorePopup"></div>
 
     <!-- Debug Div -->
     <div id="debugDiv" style="position: fixed; top: 10px; left: 10px; background: rgba(0,0,0,0.8); color: white; padding: 10px; font-family: monospace; font-size: 12px; z-index: 10000; border: 1px solid white; display: none;">
@@ -63,14 +75,7 @@
 
     <div id="bonusBackground"></div>
 
-    <div id="topDiv">
-    </div>
-
-    <div id="bonusDiv">
-    </div>
-
-    <div id="bonusButtonContainer">
-    </div>
+    <div id="bonusButtonContainer"></div>
 
     <!-- Start Menu -->
     <div id="startMenu">
@@ -88,7 +93,9 @@
             
             <div id="instructionsText">
                 <div class="instructionLine">match the cards to score points</div>
+                <div class="instructionDivider"></div>
                 <div class="instructionLine">match faster to multiply<br>your points by up to 5x</div>
+                <div class="instructionDivider"></div>
                 <div class="instructionLine">scoring will earn you bonus buttons:</div>
             </div>
             
@@ -110,40 +117,6 @@
             <div id="closeInstructionsButton">CLOSE</div>
         </div>
     </div>
-
-    <!-- Final Score Screen -->
-    <div id="finalDiv" >
-        <div id="scoreDiv1">SCORE</div>
-        
-        <div id="scoreBreakdown">
-            <div class="scoreDetail">
-                <span class="scoreLabel">Number of Matches:</span>
-                <span class="scoreValue" id="scoreBase">0</span>
-            </div>
-            <div class="scoreDetail">
-                <span class="scoreLabel">Match Multiplier Bonus:</span>
-                <span class="scoreValue" id="scoreBonus">0</span>
-            </div>
-            <div class="scoreDetail">
-                <span class="scoreLabel">x2 Bonus:</span>
-                <span class="scoreValue" id="x2Bonus">0</span>
-            </div>
-            <div class="scoreDetail">
-                <span class="scoreLabel">Level Reached:</span>
-                <span class="scoreValue" id="levelReached">1</span>
-            </div>
-        </div>
-        <div id="scoreDiv2">0</div>
-    </div>
-
-    <!-- loading -->
-
-    <div id="loadingImage"></div>
-    <div id="loadingBack"></div>
-
-    <!-- Fader elements -->
-    <div id="fader"></div>
-    <div id="faderBlack"></div>
 
 </body>
 </html>
