@@ -62,27 +62,17 @@ export class Scene {
     }
 
     preloadCardImages() {
-        // Get all available card types
+        // Get all available card types from cards folder
         const cardTypes = [
-            'axe_r.png', 'axe_p.png', 'axe_g.png', 'axe_b.png',
-            'battleaxe_r.png', 'battleaxe_p.png', 'battleaxe_g.png', 'battleaxe_b.png',
-            'bow_r.png', 'bow_p.png', 'bow_g.png', 'bow_b.png',
-            'crossbow_r.png', 'crossbow_p.png', 'crossbow_g.png', 'crossbow_b.png',
-            'gun_r.png', 'gun_p.png', 'gun_g.png', 'gun_b.png',
-            'hammer_r.png', 'hammer_p.png', 'hammer_g.png', 'hammer_b.png',
-            'knuckles_r.png', 'knuckles_p.png', 'knuckles_g.png', 'knuckles_b.png',
-            'laser_r.png', 'laser_p.png', 'laser_g.png', 'laser_b.png',
-            'machinegun_r.png', 'machinegun_p.png', 'machinegun_g.png', 'machinegun_b.png',
-            'mace_r.png', 'mace_p.png', 'mace_g.png', 'mace_b.png',
-            'missile_r.png', 'missile_p.png', 'missile_g.png', 'missile_b.png',
-            'raygun_r.png', 'raygun_p.png', 'raygun_g.png', 'raygun_b.png',
-            'revolver_r.png', 'revolver_p.png', 'revolver_g.png', 'revolver_b.png',
-            'rpg_r.png', 'rpg_p.png', 'rpg_g.png', 'rpg_b.png',
-            'slingshot_r.png', 'slingshot_p.png', 'slingshot_g.png', 'slingshot_b.png',
-            'sniper_r.png', 'sniper_p.png', 'sniper_g.png', 'sniper_b.png',
-            'staff_r.png', 'staff_p.png', 'staff_g.png', 'staff_b.png',
-            'sword_r.png', 'sword_p.png', 'sword_g.png', 'sword_b.png',
-            'wand_r.png', 'wand_p.png', 'wand_g.png', 'wand_b.png'
+            'axe1.png', 'axe2.png', 'axe3.png', 'axe4.png', 'axe5.png', 'axe6.png', 'axe7.png', 'axe8.png',
+            'bow1.png', 'bow2.png', 'bow3.png', 'bow4.png',
+            'hammer1.png', 'hammer2.png', 'hammer3.png', 'hammer4.png', 'hammer5.png', 'hammer6.png', 'hammer7.png', 'hammer8.png',
+            'kinfe1.png', 'knife2.png', 'knife3.png', 'knife4.png',
+            'mace1.png', 'mace2.png', 'mace3.png', 'mace4.png',
+            'staff1.png', 'staff2.png', 'staff3.png', 'staff4.png',
+            'sword1.png', 'sword2.png', 'sword3.png', 'sword4.png',
+            'wand1.png', 'wand2.png', 'wand3.png', 'wand4.png',
+            'w75.png', 'w76.png', 'w77.png'
         ];
 
         // Store loaded images for reuse
@@ -362,25 +352,15 @@ export class Scene {
     fillCardGridWithMatches(totalCards) {
         // Get all available card types from the cards folder
         const cardTypes = [
-            'axe_r.png', 'axe_p.png', 'axe_g.png', 'axe_b.png',
-            'battleaxe_r.png', 'battleaxe_p.png', 'battleaxe_g.png', 'battleaxe_b.png',
-            'bow_r.png', 'bow_p.png', 'bow_g.png', 'bow_b.png',
-            'crossbow_r.png', 'crossbow_p.png', 'crossbow_g.png', 'crossbow_b.png',
-            'gun_r.png', 'gun_p.png', 'gun_g.png', 'gun_b.png',
-            'hammer_r.png', 'hammer_p.png', 'hammer_g.png', 'hammer_b.png',
-            'knuckles_r.png', 'knuckles_p.png', 'knuckles_g.png', 'knuckles_b.png',
-            'laser_r.png', 'laser_p.png', 'laser_g.png', 'laser_b.png',
-            'machinegun_r.png', 'machinegun_p.png', 'machinegun_g.png', 'machinegun_b.png',
-            'mace_r.png', 'mace_p.png', 'mace_g.png', 'mace_b.png',
-            'missile_r.png', 'missile_p.png', 'missile_g.png', 'missile_b.png',
-            'raygun_r.png', 'raygun_p.png', 'raygun_g.png', 'raygun_b.png',
-            'revolver_r.png', 'revolver_p.png', 'revolver_g.png', 'revolver_b.png',
-            'rpg_r.png', 'rpg_p.png', 'rpg_g.png', 'rpg_b.png',
-            'slingshot_r.png', 'slingshot_p.png', 'slingshot_g.png', 'slingshot_b.png',
-            'sniper_r.png', 'sniper_p.png', 'sniper_g.png', 'sniper_b.png',
-            'staff_r.png', 'staff_p.png', 'staff_g.png', 'staff_b.png',
-            'sword_r.png', 'sword_p.png', 'sword_g.png', 'sword_b.png',
-            'wand_r.png', 'wand_p.png', 'wand_g.png', 'wand_b.png'
+            'axe1.png', 'axe2.png', 'axe3.png', 'axe4.png', 'axe5.png', 'axe6.png', 'axe7.png', 'axe8.png',
+            'bow1.png', 'bow2.png', 'bow3.png', 'bow4.png',
+            'hammer1.png', 'hammer2.png', 'hammer3.png', 'hammer4.png', 'hammer5.png', 'hammer6.png', 'hammer7.png', 'hammer8.png',
+            'kinfe1.png', 'knife2.png', 'knife3.png', 'knife4.png',
+            'mace1.png', 'mace2.png', 'mace3.png', 'mace4.png',
+            'staff1.png', 'staff2.png', 'staff3.png', 'staff4.png',
+            'sword1.png', 'sword2.png', 'sword3.png', 'sword4.png',
+            'wand1.png', 'wand2.png', 'wand3.png', 'wand4.png',
+            'w75.png', 'w76.png', 'w77.png'
         ];
         
         // Select random card types for pairs
