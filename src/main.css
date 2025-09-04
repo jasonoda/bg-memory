@@ -28,7 +28,9 @@ html.animating-cards-out, body.animating-cards-out {
 }
 
 body{
-    background: linear-gradient(135deg, #0f1f3d 0%, #1a2f5a 50%, #0f1f3d 100%);
+    background: url('./images/forestImage.png') no-repeat center center;
+    background-size: auto 100vh;
+    background-attachment: fixed;
     user-select: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -274,9 +276,9 @@ body::before {
     }
     
     body {
-        background: linear-gradient(135deg, #0f1f3d 0%, #1a2f5a 50%, #0f1f3d 100%);
-        -webkit-background-size: cover;
-        background-size: cover;
+        background: url('./images/forestImage.png') no-repeat center center;
+        -webkit-background-size: auto 100vh;
+        background-size: auto 100vh;
         min-height: 100vh;
         min-height: 100dvh; /* Dynamic viewport height */
         -webkit-transform: translateZ(0);
@@ -321,9 +323,7 @@ body::before {
     background-position: center;
 }
 
-.card-back {
-    /* Background image will be set via JavaScript */
-}
+/* .card-back background image will be set via JavaScript */
 
 .card-front {
     transform: rotateY(180deg);
@@ -430,7 +430,7 @@ body::before {
 
 
 #bonusDisplay{
-    top: 14px;
+    top: 46px;
     left: 50%;
     transform: translateX(-50%);
     color: black;
@@ -452,7 +452,7 @@ body::before {
 
 #timeFreezeDisplay{
     position: absolute;
-    top: 50px;
+    top: 80px;
     left: 50%;
     transform: translateX(-50%);
     color: #00d4ff;
@@ -488,7 +488,7 @@ body::before {
 
 #x2BonusDisplay{
     position: absolute;
-    top: 80px;
+    top: 110px;
     left: 50%;
     transform: translateX(-50%);
     color: #ff4444;
@@ -673,16 +673,69 @@ body::before {
 
 #topDiv {
     background: linear-gradient(to bottom, #00d4ff, #0099cc);
+    /* opacity: 0; */
 }
 
 #bonusDiv {
     background: linear-gradient(to bottom, #00d4ff, #0099cc);
+    /* opacity: 0; */
 }
 
 #upperLeftDiv{
-    color: black;
+    color: white;
 }
 
 #upperRightDiv{
-    color: black;
+    color: white;
+}
+#levelDiv{
+    color: white;
+}
+
+/* New Score and Time Display */
+#scoreTimeContainer {
+    position: fixed;
+    top: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 24px;
+    /* background: rgba(0, 0, 0, 0.7); */
+    background: linear-gradient(to bottom, #00d4ff, #0099cc);
+    /* border: 1px solid white; */
+    border-radius: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* gap: 15px; */
+    z-index: 3000;
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 1px;
+}
+
+#scoreDisplay {
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    flex: 1;
+    transform: translateY(-1px);
+}
+
+#scoreTimeDivider {
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    width: 10px;
+    transform: translateY(-2px);
+}
+
+#timeDisplay {
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    flex: 1;
+    transform: translateY(-1px);
 }

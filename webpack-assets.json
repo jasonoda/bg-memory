@@ -1,6 +1,6 @@
 {
   "index": {
-    "js": "index-bundle-a46de1beb252992025cb.js"
+    "js": "index-bundle-78a12c8f598005476ed4.js"
   },
   "": {
     "png": [
@@ -81,6 +81,7 @@
       "src/images/cards2v/missile_r.png",
       "src/images/cards2v/wand_p.png",
       "src/images/cards2v/greatsword_g.png",
+      "src/images/forestImage.png",
       "src/images/cards2v/rpg_r.png",
       "src/images/cards2v/missile_p.png",
       "src/images/cards2v/greatsword_p.png",
@@ -91,12 +92,13 @@
       "src/images/cards2v/wand_r.png",
       "src/images/bonus_clock.png",
       "src/images/bonus_eye.png",
-      "src/images/splashImage.png",
       "src/images/cards2v/staff_g.png",
       "src/images/cards2v/staff_b.png",
       "src/images/cards2v/staff_p.png",
       "src/images/bonus_x2.png",
+      "src/images/cardBack.png",
       "src/images/cards/axe2.png",
+      "src/images/splashImage.png",
       "src/images/cards/bow3.png",
       "src/images/cards/axe5.png",
       "src/images/cards/axe6.png",
@@ -142,7 +144,7 @@
       "src/images/cards/staff1.png",
       "src/images/background.png"
     ],
-    "js": "636-bundle-a46de1beb252992025cb.js",
+    "js": "570-bundle-78a12c8f598005476ed4.js",
     "mp3": [
       "src/sounds/introMusic.mp3",
       "src/sounds/softBoom.mp3",

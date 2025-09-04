@@ -27,7 +27,7 @@
     max-width: 80vw;
     /* opacity: 0; */
     padding-bottom: 30px;
-    animation: splashImageScale 3s ease-in-out infinite, splashImageBrightness 3s ease-in-out infinite;
+    animation: splashImageScale 4s ease-in-out infinite, splashImageBrightness 4s ease-in-out infinite;
 }
 
 @keyframes splashImageScale {
@@ -35,7 +35,7 @@
         transform: scale(1);
     }
     50% {
-        transform: scale(1.03);
+        transform: scale(1.02);
     }
 }
 
@@ -44,7 +44,7 @@
         filter: brightness(1);
     }
     50% {
-        filter: brightness(1.75);
+        filter: brightness(1.25);
     }
 }
 

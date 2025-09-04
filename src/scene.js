@@ -90,7 +90,7 @@ export class Scene {
             console.error('Failed to load card back image');
             this.cardBackLoaded = false;
         };
-        cardBackImage.src = 'src/images/cardBack.jpg';
+        cardBackImage.src = 'src/images/cardBack.png';
 
         // Preload all card front images with error handling
         cardTypes.forEach(cardType => {
@@ -281,7 +281,7 @@ export class Scene {
             padding: 0;
         `;
         // Set card back image with robust fallback
-        const cardBackUrl = 'src/images/cardBack.jpg';
+        const cardBackUrl = 'src/images/cardBack.png';
         
         // Check if we have a preloaded image
         if (this.loadedImages && this.loadedImages.has('cardBack')) {
@@ -671,14 +671,14 @@ export class Scene {
     }
     
     createTimer() {
-        // Get existing timer element
-        this.timerElement = document.getElementById('upperRightDiv');
+        // Get new timer element
+        this.timerElement = document.getElementById('timeDisplay');
         this.updateTimerDisplay();
     }
     
     createScoreDisplay() {
-        // Get existing score element
-        this.scoreElement = document.getElementById('upperLeftDiv');
+        // Get new score element
+        this.scoreElement = document.getElementById('scoreDisplay');
         this.updateScoreDisplay();
     }
     
@@ -819,20 +819,20 @@ export class Scene {
             
             if (timeActive && x2Active) {
                 // Both active - stack them with space between
-                timeFreezeDisplay.style.top = '50px';
-                x2BonusDisplay.style.top = '85px';
+                timeFreezeDisplay.style.top = '80px';
+                x2BonusDisplay.style.top = '110px';
             } else if (timeActive) {
                 // Only time freeze active
-                timeFreezeDisplay.style.top = '50px';
-                x2BonusDisplay.style.top = '80px';
+                timeFreezeDisplay.style.top = '80px';
+                x2BonusDisplay.style.top = '110px';
             } else if (x2Active) {
                 // Only x2 bonus active
-                timeFreezeDisplay.style.top = '50px';
-                x2BonusDisplay.style.top = '50px';
+                timeFreezeDisplay.style.top = '80px';
+                x2BonusDisplay.style.top = '80px';
             } else {
                 // Neither active - reset to default positions
-                timeFreezeDisplay.style.top = '50px';
-                x2BonusDisplay.style.top = '80px';
+                timeFreezeDisplay.style.top = '80px';
+                x2BonusDisplay.style.top = '110px';
             }
         }
     }
